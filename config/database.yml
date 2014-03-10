@@ -17,7 +17,6 @@ development:
   encoding: unicode
   database: campaign_development
   pool: 5
-  username: campaign
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +42,6 @@ test:
   encoding: unicode
   database: campaign_test
   pool: 5
-  username: campaign
   password:
 
 production:
@@ -51,5 +49,4 @@ production:
   encoding: unicode
   database: campaign_production
   pool: 5
-  username: campaign
   password:

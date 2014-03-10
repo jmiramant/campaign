@@ -1,7 +1,7 @@
 $(document).ready ->
   $('#slides').slidesjs -> 
-    width: 940,
-    height: 475,
+    width: 940
+    height: 475
     play: 
       active: true
       effect: "slide"
@@ -9,5 +9,6 @@ $(document).ready ->
       auto: true
       pauseOnHover: true
       restartDelay: 2500
-
+    navigation: 
+          active: false
   $("#blog-modal").fancybox()

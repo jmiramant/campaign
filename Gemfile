@@ -21,4 +21,6 @@ gem 'fancybox2-rails', '~> 0.2.8'
 gem 'capistrano'
 gem 'capistrano-rails'
 
+gem 'rails_12factor', group: :production
 # gem 'debugger'
+ruby '2.0.0'

@@ -25,7 +25,8 @@
     %meta{content: "Dave Miramant for Senate", property: "og:site_name"}/
     %meta{content: "766370413", property: "fb:admins"}/
     %meta{content: "davemiramant.com is the official website of Dave Miramant's campaign for U.S. Senate in Massachusetts. Sign up to join the fight for middle class families", property: "og:description"}/
-    %link{href: "http://davemiramant.com/images/fb-preview.jpg", rel: "image_src"}/
+    %link{href: "http://davemiramant.com/images/fb-preview.jpg", rel: "image_src"}
+    %link{href: 'http://fonts.googleapis.com/css?family=Shadows+Into+Light', rel:'stylesheet', type:'text/css'}
     %script{charset: "utf-8", type: "text/javascript"}
       :cdata
         (function(){
@@ -95,8 +96,6 @@
                 %a{href: "/issues/", title: "Issues"} Issues
               %li#nav-blog
                 %a{href: "http://daveformaine.tumblr.com/", traget: '_blank', id: "blog-modal"} Blog
-              %li#nav-video
-                %a{href: "/video/", title: "Video"} Video
               %li#nav-act
                 %a{href: "/volenteer", title: "Get Involved"} Get Involved
           / end .nav-primary
@@ -105,7 +104,7 @@
         .row
           %aside.complementary{role: "complementary"}
             %section.mod.action
-              %h2.giga What Am I Up To...
+              %h2.giga What I'm Up To...
               = render 'facebook_widget'
           %section.main{role: "main"}
             #slides
@@ -113,43 +112,39 @@
               %img{src: "assets/home_1.jpg", class: 'realign'}
               %img{src: "assets/home_3.jpg"}
         .row
+          .moto Meeting challenges, working together!  
       .container
-        %section.main{style: 'width:600px'}
+        %section.main{style: 'width:530px'}
           %header.heading
-            %h1
-              %p From the campaign trial...
+            %p From the campaign trial...
           .hfeed
             %article.hentry
               %header
                 %h2.entry-title.giga
-                %p
-                  %time March 1, 2014
-                  | By
-                  %span.author.byline.vcard.fn Dave Miramant
               %script{src: "http://daveformaine.tumblr.com/js", type: "text/javascript"}
-        %aside.complementary{role: "complementary", style: 'width:380px'}
-          .heading Together, we can...
+        %aside.complementary{role: "complementary", style: 'width:450px;border-left: 2px solid #0194c9;margin-right: -2px;'}
+          .heading 
+            Together, we can...
+          .letter
             %p
               Friends and Neighbors,
             %p
               I will be visiting every town and hopefully most of your homes during the course of the campaign. I really enjoy seeing and hearing how different life is for each of us in our corner of the world.
-            %p While the campaign for Senate requires a big commitment, it has great rewards:
+            %p 
+              While the campaign for Senate requires a big commitment, it has great rewards:
               %ul
                 %li The enthusiasm and optimism that greeted me when my candidacy was announced
                 %li The chance to work with a group of committed folks to meet challenges, protect and improve our State
                 %li The opportunity to bring innovative ideas to support a thriving economy
             %p
-              When I was a State Representative, I worked to increase the funds available to weatherproof our homes while looking for ways to tap the unlimited resources of solar power and offshore wind. The methods to bring this into common use are now available and I will continue to support the effort.
-            %p
-              With the economic slowdown, we have the obligation to all taxpayers to make sure we are being efficient with our programs in Augusta. This means finding creative ways to care for our neediest folks, our children and our elders. This is a commitment I will never forget no matter how tough the challenge!
-            %p
-              I will continue to support the businesses that make Maine strong. We need to encourage and fund opportunities to bring new ideas to market, and to keep our children here at home if they choose do stay. We must get all the value we can out of the products that start here in Maine to protect a quality of life for our workers.
-            %p
-              I will continue to support schools that meet the needs of our students and look for ways to change those that don’t. This is not a problem to solve just a system to evolve.
+              Important issues in the upcoming session will include alternetive energy generation, taking care of our neediest folks, supporting small Maine businesses and helping our education systems evolve to meet the needs of our students.
+
+              We have the resources, the ideas and the people to meet any challenge we face together. I promise to listen to your ideas and to make them heard in the Senate!
             %p
               Thank you for the chance to put your ideas and mine into action.
             
       %footer.contentinfo.container{role: "contentinfo"}
+        .bg-wrapper
         .mod
           %h3.milli davemiramant.com
           %ul
@@ -161,8 +156,6 @@
               %a{href: "/blog", title: "Blog"} Blog
             %li
               %a{href: "/video", title: "Video"} Video
-            %li
-              %a{href: "/volenteer", title: "Get Involved"} Get Involved
             %li
               %a{href: "/donate", title: "Donate"} Donate
         .mod
@@ -176,5 +169,5 @@
               %a{href: "/text", title: "Phone"} Phone
         .legal
           %small.org-funding
-            Autherized and Paid for by the Candidate
+            Authorized and Paid for by the Candidate
           %p.ownership Copyright © 2014 by Dave Miramant for State Senate
