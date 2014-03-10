@@ -4,7 +4,6 @@ gem 'rails', '3.2.16'
 gem 'pg'
 
 gem 'formtastic'
-gem 'rails-gallery'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
