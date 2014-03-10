@@ -377,23 +377,24 @@ nav
       border: none
 .nav-primary
   ul
+    width: 980px !important
     a
       position: relative
       display: block
-      vertical-align: center
-      padding: 0.929em 1.571em
+      text-align: center
+      padding: 1.2em 1.571em
       font-family: ff-din-web, Tahoma, verdana, "Nimbus Sans L", sans-serif
       font-size: 1em
       font-weight: 800
       text-transform: uppercase
     li
       &:hover, &:focus, &.active
-        background-color: #0194c9
-    a
-      &:hover, &:focus, &.active
-        background-color: #0194c9
+        background-color: #1f588d
+        border-bottom: 5px solid #a30006
   li
+    @include transition(all, 0.2s, ease-in-out)
     display: table-cell
+    border-bottom: 5px solid #0194c9
     position: relative
 .nav-secondary
   padding-top: 0.714em
@@ -439,6 +440,7 @@ body
     background-color: #0F3B61
 .nav-primary
   background-color: #0194C9
+  margin-bottom: 1px
 .block
   display: block
 a.block
@@ -1308,6 +1310,8 @@ header[role="banner"]
   margin-bottom: 0
 .row:last-child
   border-bottom: 1px solid #c7dcf0
+  height: 124px
+  background-color: #f2f5f7
 .mod, .vanscriptmgr-script-result-wrapper
   margin-bottom: 0.714em
   padding: 1.429em
@@ -1798,7 +1802,6 @@ header[role="banner"] .container
     width: 1px
     height: 1px
   > ul
-    width: 862px
     float: left
   ul
     margin: 0
@@ -1893,9 +1896,9 @@ header[role="banner"] .container
 
 .nav-primary.new li
   display: inline-block
-  margin: 0 17px
+  margin: 0 -2px
   text-align: center
-
+  width: 20% !important
 
 .nav-secondary
   background-color: #0194c9
@@ -1952,7 +1955,9 @@ header[role="banner"] .container
   font-family: 'Shadows Into Light', cursive
   text-align: center
   font-size: 46px
-  margin: 30px 0
+  padding: 30px 0
+  float: right
+  width: 70%
   color: #363636
 
 .addthis_32x32_style
@@ -2348,7 +2353,7 @@ table
 .tumblr_posts
   list-style: none
   color: #363636
-  border-bottom: 2px solid #afafaf
+  border-bottom: 2px solid #D0E2F2
   margin: 0 25px
   .tumblr_title
     font-size: 23px

@@ -1,173 +1,68 @@
-!!!
-/[if lt IE 7] <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" xml:lang='en' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://ogp.me/ns#' xmlns='http://www.w3.org/1999/xhtml'>
-/[if IE 7] <html class="no-js ie lt-ie9 lt-ie8" lang="en" xml:lang='en' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://ogp.me/ns#' xmlns='http://www.w3.org/1999/xhtml'>
-/[if IE 8] <html class="no-js ie lt-ie9" lang="en" xml:lang='en' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://ogp.me/ns#' xmlns='http://www.w3.org/1999/xhtml'>
-/[if gte IE 9] <html class="no-js ie gte-ie9" lang="en" xml:lang='en' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://ogp.me/ns#' xmlns='http://www.w3.org/1999/xhtml'>
-/ [if !IE]><!
-%html.no-js{lang: "en", "xml:lang" => "en", xmlns: "http://www.w3.org/1999/xhtml", "xmlns:fb" => "http://www.facebook.com/2008/fbml", "xmlns:og" => "http://ogp.me/ns#"}
-  / <![endif]
-  %head
-    %meta{charset: "utf-8"}/
-    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %meta{content: "en-us", "http-equiv" => "Content-Language"}/
-    %meta{content: "about, dave, miramant", name: "Keywords"}/
-    %title Dave Miramant for Senate
-    %meta{content: "Dave Miramant for Senate", name: "title"}/
-    %meta{content: "DaveMiramant.com is the official website of Dave Miramant's campaign for Maine State Senate. Sign up to join the fight for middle class families.", name: "description"}/
-    %meta{content: "(c) Copyright 2014 Dave Miramant for Maine State Senate", name: "copyright"}/
-    %meta{content: "noodp, noydir", name: "robots"}/
-    %meta{content: "1 day", name: "revisit-after"}/
-    %meta{content: "CWVxSTAboWbL6kcvQkPZclcdEa89KfYP-QenjXrHMJ4", name: "google-site-verification"}/
-    %meta{content: "Dave Miramant for Senate", property: "og:title"}/
-    %meta{content: "politician", property: "og:type"}/
-    %meta{content: "http://davemiramant.com/", property: "og:url"}/
-    %meta{content: "http://davemiramant.com/images/fb-preview.jpg", property: "og:image"}/
-    %meta{content: "Dave Miramant for Senate", property: "og:site_name"}/
-    %meta{content: "766370413", property: "fb:admins"}/
-    %meta{content: "davemiramant.com is the official website of Dave Miramant's campaign for U.S. Senate in Massachusetts. Sign up to join the fight for middle class families", property: "og:description"}/
-    %link{href: "http://davemiramant.com/images/fb-preview.jpg", rel: "image_src"}
-    %link{href: 'http://fonts.googleapis.com/css?family=Shadows+Into+Light', rel:'stylesheet', type:'text/css'}
-    %script{charset: "utf-8", type: "text/javascript"}
-      :cdata
-        (function(){
-        var cookies;
-        
-        var readCookie = function(name,c,C,i){
-        if(cookies){ return cookies[name]; }
-        
-        c = document.cookie.split('; ');
-        cookies = {};
-        
-        for(i=c.length-1; i>=0; i--){
-        C = c[i].split('=');
-        cookies[C[0]] = C[1];
-        }
-        
-        return cookies[name];
-        };
-        
-        window.readCookie = readCookie; // or expose it however you want
-        })();
-  %body#home.home
-    #wrapper
-      %header#banner{role: "banner"}
-        .container
-          %h1#branding
-            %a{href: "/", title: "Home | Dave Miramant For Senate"} Dave Miramant For Senate
-          .cta
-            %p
-              Knox County Voters: Please Help Me By Supporting the Clean Election Fund
-            %form#subscribe.inline
-              %a{href: 'https://www5.informe.org/cgi-bin/online/ethics/cleanelection/step01_cand.pl'}
-                .donate-btn
-                  .donate Donate $5
-            .social
-              %h2 Keep in touch
-              .facebook
-                #fb-root
-                :javascript
-                  //<![CDATA[
-                    (function(d, s, id) {
-                      var js, fjs = d.getElementsByTagName(s)[0];
-                      if (d.getElementById(id)) return;
-                      js = d.createElement(s); js.id = id;
-                      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                      fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));
-                  //]]>
-                .fb-like{"data-font" => "tahoma", "data-href" => "https://www.facebook.com/DaveForMaine", "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "true", "data-width" => "100"}
-              .twitter
-                %a.twitter-follow-button{"data-show-count" => "false", "data-show-screen-name" => "false", href: "https://twitter.com/DaveForMaine"} Follow @DaveForMaine
-                
+= render 'header'
+.container.new-home
+  .row
+    %aside.complementary{role: "complementary"}
+      %section.mod.action
+        %h2.giga What I'm Up To...
+        = render 'facebook_widget'
+    %section.main{role: "main"}
+      #slides
+        %img{src: "assets/home_2.jpg"}
+        %img{src: "assets/home_1.jpg", class: 'realign'}
+        %img{src: "assets/home_3.jpg"}
+  .row
+    .moto Meeting challenges, working together!  
+.container
+  %section.main{style: 'width:530px'}
+    %header.heading
+      %p From the campaign trial...
+    .hfeed
+      %article.hentry
+        %header
+          %h2.entry-title.giga
+        %script{src: "http://daveformaine.tumblr.com/js", type: "text/javascript"}
+  %aside.complementary{role: "complementary", style: 'width:450px;border-left: 2px solid #0194c9;margin-right: -2px;'}
+    .heading 
+      Together, we can...
+    .letter
+      %p
+        Friends and Neighbors,
+      %p
+        I will be visiting every town and hopefully most of your homes during the course of the campaign. I really enjoy seeing and hearing how different life is for each of us in our corner of the world.
+      %p 
+        While the campaign for Senate requires a big commitment, it has great rewards:
+        %ul
+          %li The enthusiasm and optimism that greeted me when my candidacy was announced
+          %li The chance to work with a group of committed folks to meet challenges, protect and improve our State
+          %li The opportunity to bring innovative ideas to support a thriving economy
+      %p
+        Important issues in the upcoming session will include alternetive energy generation, taking care of our neediest folks, supporting small Maine businesses and helping our education systems evolve to meet the needs of our students.
 
-                :javascript
-                  //<![CDATA[
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-                  //]]>
-            / end .social
-          %nav.nav-primary.new{role: "navigation"}
-            %h2 Menu
-            %ul
-              %li#nav-home
-                %a{href: "/", title: "Home"} Home
-              %li#nav-about
-                %a{href: "/about", title: "About Dave"} About Dave
-              %li#nav-issues
-                %a{href: "/issues/", title: "Issues"} Issues
-              %li#nav-blog
-                %a{href: "http://daveformaine.tumblr.com/", traget: '_blank', id: "blog-modal"} Blog
-              %li#nav-act
-                %a{href: "/volenteer", title: "Get Involved"} Get Involved
-          / end .nav-primary
-      / end #banner
-      .container.new-home
-        .row
-          %aside.complementary{role: "complementary"}
-            %section.mod.action
-              %h2.giga What I'm Up To...
-              = render 'facebook_widget'
-          %section.main{role: "main"}
-            #slides
-              %img{src: "assets/home_2.jpg"}
-              %img{src: "assets/home_1.jpg", class: 'realign'}
-              %img{src: "assets/home_3.jpg"}
-        .row
-          .moto Meeting challenges, working together!  
-      .container
-        %section.main{style: 'width:530px'}
-          %header.heading
-            %p From the campaign trial...
-          .hfeed
-            %article.hentry
-              %header
-                %h2.entry-title.giga
-              %script{src: "http://daveformaine.tumblr.com/js", type: "text/javascript"}
-        %aside.complementary{role: "complementary", style: 'width:450px;border-left: 2px solid #0194c9;margin-right: -2px;'}
-          .heading 
-            Together, we can...
-          .letter
-            %p
-              Friends and Neighbors,
-            %p
-              I will be visiting every town and hopefully most of your homes during the course of the campaign. I really enjoy seeing and hearing how different life is for each of us in our corner of the world.
-            %p 
-              While the campaign for Senate requires a big commitment, it has great rewards:
-              %ul
-                %li The enthusiasm and optimism that greeted me when my candidacy was announced
-                %li The chance to work with a group of committed folks to meet challenges, protect and improve our State
-                %li The opportunity to bring innovative ideas to support a thriving economy
-            %p
-              Important issues in the upcoming session will include alternetive energy generation, taking care of our neediest folks, supporting small Maine businesses and helping our education systems evolve to meet the needs of our students.
-
-              We have the resources, the ideas and the people to meet any challenge we face together. I promise to listen to your ideas and to make them heard in the Senate!
-            %p
-              Thank you for the chance to put your ideas and mine into action.
-            
-      %footer.contentinfo.container{role: "contentinfo"}
-        .bg-wrapper
-        .mod
-          %h3.milli davemiramant.com
-          %ul
-            %li
-              %a{href: "/about", title: "About Dave"} About Dave
-            %li
-              %a{href: "/issues", title: "Issues"} Issues
-            %li
-              %a{href: "/blog", title: "Blog"} Blog
-            %li
-              %a{href: "/video", title: "Video"} Video
-            %li
-              %a{href: "/donate", title: "Donate"} Donate
-        .mod
-          %h3.milli Connect
-          %ul
-            %li
-              %a{href: "/facebook", target: "_blank", title: "Facebook"} Facebook
-            %li
-              %a{href: "/twitter", target: "_blank", title: "Twitter"} Twitter
-            %li
-              %a{href: "/text", title: "Phone"} Phone
-        .legal
-          %small.org-funding
-            Authorized and Paid for by the Candidate
-          %p.ownership Copyright © 2014 by Dave Miramant for State Senate
+        We have the resources, the ideas and the people to meet any challenge we face together. I promise to listen to your ideas and to make them heard in the Senate!
+      %p
+        Thank you for the chance to put your ideas and mine into action.
+      
+%footer.contentinfo.container{role: "contentinfo"}
+  .bg-wrapper
+  .mod
+    %h3.milli davemiramant.com
+    %ul
+      %li
+        %a{href: "/about", title: "About Dave"} About Dave
+      %li
+        %a{href: "/issues", title: "Issues"} Issues
+      %li
+        %a{href: "http://daveformaine.tumblr.com/", title: "Blog"} Blog
+      %li
+        %a{href: "https://www5.informe.org/cgi-bin/online/ethics/cleanelection/step01_cand.pl", title: "Donate"} Donate
+  .mod
+    %h3.milli Connect
+    %ul
+      %li
+        %a{href: "/facebook", target: "_blank", title: "Facebook"} Facebook
+      %li
+        %a{href: "/twitter", target: "_blank", title: "Twitter"} Twitter
+  .legal
+    %small.org-funding
+      Authorized and Paid for by the Candidate
+    %p.ownership Copyright © 2014 by Dave Miramant for State Senate

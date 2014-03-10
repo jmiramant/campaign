@@ -12,3 +12,7 @@ $(document).ready ->
     navigation: 
           active: false
   $("#blog-modal").fancybox()
+
+  url = location.pathname.replace('/','')
+  url = 'home' if url is ''
+  $('.nav-primary li#' + url).addClass 'active'
