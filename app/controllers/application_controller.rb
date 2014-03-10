@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def index
-    @user = User.new
   end
 
   def about
@@ -15,7 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def volenteer
-    @user = User.new
   end
 
 end
