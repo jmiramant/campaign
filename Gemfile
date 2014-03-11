@@ -14,7 +14,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bourbon'
   gem 'neat'
-  gem 'haml'
   gem 'uglifier', '>= 1.0.3'
 end
 
