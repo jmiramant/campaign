@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
 gem 'pg'
+gem 'gibbon'
 
 gem 'formtastic'
 
@@ -27,3 +28,4 @@ gem 'capistrano-rails'
 gem 'rails_12factor', group: :production
 # gem 'debugger'
 ruby '2.0.0'
+
