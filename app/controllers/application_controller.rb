@@ -2,12 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def index
-    # gb = Gibbon::API.new("your_api_key")
-    # gb.lists.subscribe({
-    #   :id => list_id, 
-    #   :email => {:email => 'email_address'}, 
-    #   :merge_vars => {:FNAME => 'First Name', :LNAME => 'Last Name'}, 
-    #   :double_optin => false})
   end
 
   def about
@@ -20,6 +14,15 @@ class ApplicationController < ActionController::Base
   end
 
   def volenteer
+  end
+
+  def mailchimp_add
+    gb = Gibbon::API.new("7ebdadb43149ce374c6693ff4b83b212-us8")
+    gb.lists.subscribe({
+      :id => list_id, 
+      :email => {:email => 'email_address'}, 
+      :merge_vars => {:FNAME => 'First Name', :LNAME => 'Last Name'}, 
+      :double_optin => false})
   end
 
 end
