@@ -19,10 +19,11 @@ class ApplicationController < ActionController::Base
   def mailchimp_add
     gb = Gibbon::API.new("7ebdadb43149ce374c6693ff4b83b212-us8")
     gb.lists.subscribe({
-      :id => list_id, 
-      :email => {:email => 'email_address'}, 
-      :merge_vars => {:FNAME => 'First Name', :LNAME => 'Last Name'}, 
+      :id => '8cbdb59b13', 
+      :email => {:email => params['user']['email']}, 
+      :merge_vars => {:FNAME => params['user']['name']}, 
       :double_optin => false})
+    render :nothing => true, :status => 200, :content_type => 'text/html'
   end
 
 end

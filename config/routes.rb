@@ -5,5 +5,6 @@ Campaign::Application.routes.draw do
   match 'issues' => "application#issues"
   match 'video' => "application#video"
   match 'volenteer' => "application#volenteer" 
+  post 'email' => "application#mailchimp_add" 
 
 end
