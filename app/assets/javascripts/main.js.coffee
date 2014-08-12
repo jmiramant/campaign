@@ -3,8 +3,8 @@ $(document).ready ->
   $(".iosslider.main").iosSlider
     snapToChildren: true
     autoSlide: true
-    autoSlideTimer: 2000
-    autoSlideTransTimer: 3250
+    autoSlideTimer: 2500
+    autoSlideTransTimer: 4250
     desktopClickDrag: true
     scrollbarHide: true
     infiniteSlider: true
