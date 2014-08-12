@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require fancybox
+//= require iosSlider
 //= require_tree .

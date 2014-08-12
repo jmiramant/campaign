@@ -1,3 +1,17 @@
+.iosslider
+  position: relative
+  top: 0
+  left: 0
+  overflow: hidden
+  width: 685px
+  height: 390px
+  .slider
+    width: 100%
+    height: 100%
+    .slide
+      float: left
+      width: 685px
+      height: 390px
 
 @mixin transition($transition-property, $transition-time, $method)
   -webkit-transition: $transition-property $transition-time $method
@@ -820,12 +834,12 @@ textarea
     font-weight: 800
     padding: 14px 0 0 0
     text-align: center
-    cursor: pointer 
+    cursor: pointer
     @include transition(all, 0.2s, ease-in-out)
     a
     &:active
     &:hover
-      background-color: #4C0000 
+      background-color: #4C0000
 
 
 .inline
@@ -918,7 +932,7 @@ textarea
   padding: 1.071em
   background-color: #0F3B61
 .groups .group-form
-  
+
 .group-form
   .giga, h2, .vanscriptmgr-script-title, label, p
     color: white
@@ -1106,7 +1120,7 @@ input
     &.error
       color: #5f1f1f
       background-color: #f1bfbf
-    
+
     height: 6.429em
   form
     li
@@ -1214,7 +1228,7 @@ header
     padding: 10px 18px
 header[role="banner"]
   padding: 0
-  
+
   a, h2, label
     color: white
   .nav-secondary a
@@ -1250,7 +1264,7 @@ header[role="banner"]
     height: 30px
     float: left
     padding: 0em 2.214em 0em 2.214em
-  p 
+  p
     float: left
     width: 56%
     text-align: center
@@ -1844,7 +1858,7 @@ header[role="banner"] .container
 #nav-about
   width: 167px
   > a
-  
+
     background-position: -56px 50%
 
 
@@ -1852,7 +1866,7 @@ header[role="banner"] .container
 #nav-issues
   width: 91px
   > a
-  
+
     background-position: -223px 50%
 
 
@@ -1860,7 +1874,7 @@ header[role="banner"] .container
 #nav-groups
   width: 96px
   > a
-  
+
     background-position: -314px 50%
 
 
@@ -1868,7 +1882,7 @@ header[role="banner"] .container
 #nav-blog
   width: 78px
   > a
-  
+
     background-position: -410px 50%
 
 
@@ -1876,7 +1890,7 @@ header[role="banner"] .container
 #nav-news
   width: 83px
   > a
-  
+
     background-position: -488px 50%
 
 
@@ -1884,7 +1898,7 @@ header[role="banner"] .container
 #nav-video
   width: 82px
   > a
-  
+
     background-position: -571px 50%
 
 
@@ -1892,7 +1906,7 @@ header[role="banner"] .container
 #nav-volunteer
   width: 122px
   > a
-  
+
     background-position: -653px 50%
 
 
@@ -1900,7 +1914,7 @@ header[role="banner"] .container
 #nav-act
   width: 122px
   > a
-  
+
     background-position: -862px 50%
 
 
@@ -2260,7 +2274,7 @@ header[role="banner"] .container
   margin-bottom: 0px
 
 
-  
+
 .view-events .views-field-title a, .vanevents-event-list-name a
   border: none
 table
