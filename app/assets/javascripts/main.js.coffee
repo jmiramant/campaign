@@ -1,20 +1,24 @@
 $(document).ready ->
 
-  $(".iosslider").iosSlider
+  $(".iosslider.main").iosSlider
     snapToChildren: true
     autoSlide: true
-    autoSlideTimer: 3000
-    scrollbar: true
-    scrollbarHide: false
+    autoSlideTimer: 2000
+    autoSlideTransTimer: 3250
     desktopClickDrag: true
-    scrollbarLocation: "bottom"
-    scrollbarHeight: "6px"
-    scrollbarBackground: "url(_img/some-img.png) repeat 0 0"
-    scrollbarBorder: "1px solid #000"
-    scrollbarMargin: "0 30px 16px 30px"
-    scrollbarOpacity: "0.75"
+    scrollbarHide: true
+    infiniteSlider: true
 
-  $("#blog-modal").fancybox()
+  $(".iosslider.endorse").iosSlider
+    snapToChildren: true
+    snapSlideCenter: true
+    autoSlide: true
+    autoSlideTimer: 0
+    autoSlideTransTimer: 3000
+    desktopClickDrag: false
+    scrollbarHide: true
+    infiniteSlider: true
+    autoSlideHoverPause: false
 
   url = location.pathname.replace('/','')
   url = 'home' if url is ''

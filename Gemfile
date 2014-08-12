@@ -19,6 +19,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'google-analytics-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
